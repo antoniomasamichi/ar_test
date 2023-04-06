@@ -44,7 +44,6 @@
                     crossorigin
                     webkit-playsinline
                     autoplay
-                    muted
                     playsinline
                 ></video>
             </a-assets>
@@ -65,7 +64,7 @@
             >
                 <a-video
                     src="#vid"
-                    scale="1 1 1"
+                    scale="1.6 0.9 1"
                     position="0 0.1 0"
                     rotation="-90 0 0"
                     class="clickable"
@@ -75,54 +74,5 @@
 
             <a-entity camera></a-entity>
         </a-scene>
-        <b-scene
-            vr-mode-ui="enabled: false"
-            loading-screen="enabled: false;"
-            arjs='sourceType: webcam; debugUIEnabled: false;'
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <b-assets>
-                <video
-                    id="vid"
-                    src="assets/asset2.mp4"
-                    preload="auto"
-                    response-type="arraybuffer"
-                    loop
-                    crossorigin
-                    webkit-playsinline
-                    autoplay
-                    muted
-                    playsinline
-                ></video>
-            </b-assets>
-
-            <b-marker
-                type="pattern"
-                preset="custom"
-                url="assets/marker2.patt"
-                videohandler
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance="0.01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerB"
-            >
-                <b-video
-                    src="#vid"
-                    scale="1 1 1"
-                    position="0 0.1 0"
-                    rotation="-90 0 0"
-                    class="clickable"
-                    gesture-handler
-                ></b-video>
-            </b-marker>
-
-            <b-entity camera></b-entity>
-        </b-scene>
     </body>
 </html>
