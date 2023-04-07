@@ -12,20 +12,20 @@
                 },
                 init: function () {
                                         
-                    this.vid = this.data.video;
-                    this.vid.pause()
+                    this.video = this.data.video;
+                    this.video.pause()
 
 
                 },
                 tick: function(){
-                    if(this.el.object3D.visible){
+                    if(this.el.object3D.visible==true){
                         if(!this.toggle){
                             this.toggle= true;
-                            this.vid.play();
+                            this.video.play();
                         }
                     }else{
                         this.toggle = false;
-                        this.vid.pause();
+                        this.video.pause();
                     }
                 }
             });
@@ -80,6 +80,7 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
+            </a-marker>
             <a-marker
                 type="pattern"
                 preset="custom"
@@ -94,6 +95,7 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerB"
             >
+            </a-marker>
                 <a-video
                     src="#vid"
                     scale="1.6 0.9 1"
@@ -110,7 +112,6 @@
                     class="clickable"
                     gesture-handler
                 ></a-video>
-            </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
