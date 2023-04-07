@@ -48,15 +48,16 @@
         <a-marker type="pattern" preset="custom" url="assets/marker.patt" videohandler="video: #vid" smooth="true"
             smoothCount="10" smoothTolerance="0.01" smoothThreshold="5" raycaster="objects: .clickable"
             emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+            <a-video src="#vid" scale="1.6 0.9 1" position="0 0.1 0" rotation="-90 0 0" class="clickable"
+                gesture-handler></a-video>
+
         </a-marker>
         <a-marker type="pattern" preset="custom" url="assets/marker2.patt" videohandler="video: #vid2" smooth="true"
             smoothCount="10" smoothTolerance="0.01" smoothThreshold="5" raycaster="objects: .clickable"
             emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerB">
+            <a-video src="#vid2" scale="1.6 0.9 1" position="0 0.1 0" rotation="-90 0 0" class="clickable"
+                gesture-handler></a-video>
         </a-marker>
-        <a-video src="#vid" scale="1.6 0.9 1" position="0 0.1 0" rotation="-90 0 0" class="clickable"
-            gesture-handler></a-video>
-        <a-video src="#vid2" scale="1.6 0.9 1" position="0 0.1 0" rotation="-90 0 0" class="clickable"
-            gesture-handler></a-video>
 
         <a-entity camera></a-entity>
     </a-scene>
